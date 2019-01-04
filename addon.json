@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "[tl] Content Analytics",
+    "description": "Analytics content inside forums",
+    "version_id": 1000000,
+    "version_string": "1.0.0",
+    "dev": "Truonglv",
+    "dev_url": "https://nobita.me",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": [],
+    "icon": "icon.png"
+}

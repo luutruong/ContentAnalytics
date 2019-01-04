@@ -1,0 +1,19 @@
+<xf:macro name="content_rebuild">
+    <xf:set var="$jobBody">
+        <xf:selectrow name="options[content_type]"
+                      label="{{ phrase('content_type') }}">
+
+            <xf:option>{{ phrase('(all)') }}</xf:option>
+            <xf:options source="{{ $xf.app.data('Truonglv\ContentAnalytics:ContentData').getContentHandleTitlePhrases() }}" />
+        </xf:selectrow>
+
+        <xf:checkboxrow>
+            <xf:option name="options[truncate]">{{ phrase('delete_index_before_rebuilding') }}</xf:option>
+        </xf:checkboxrow>
+    </xf:set>
+
+    <xf:macro template="tools_rebuild" name="rebuild_job"
+              arg-header="{{ phrase('content_analytics_rebuild_content_data') }}"
+              arg-body="{$jobBody}"
+              arg-job="Truonglv\ContentAnalytics:ContentRebuild" />
+</xf:macro>

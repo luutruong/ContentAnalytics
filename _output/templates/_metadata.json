@@ -1,0 +1,12 @@
+{
+    "admin/content_analytics_tools_rebuild.html": {
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "57795287287e0c448af97874725f54a9"
+    },
+    "admin/content_graph_tools_rebuild.html": {
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "116f7afc6ee12b23d7d6bfb97917609c"
+    }
+}
