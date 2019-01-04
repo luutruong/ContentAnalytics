@@ -17,6 +17,12 @@
         "version_string": "1.0.0",
         "hash": "9030e39f00132d583da4122532e509e9"
     },
+    "cron_entry.tl_ContentAnalytics.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "4ba83bd7f96a3000817eb3be5871a6ae"
+    },
     "permission.general_tlCA_viewForumAnalytics.txt": {
         "global_cache": false,
         "version_id": 1000000,
