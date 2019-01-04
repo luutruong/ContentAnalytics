@@ -1,8 +1,32 @@
 {
+    "content_analytics_daily.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "c512b685438f41daa7386329a3b8f8d3"
+    },
+    "content_analytics_hourly.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "769cb50c95fd3a43c659aa73aba99e5b"
+    },
+    "content_analytics_monthly.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "9030e39f00132d583da4122532e509e9"
+    },
+    "permission.general_tlCA_viewForumAnalytics.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "219f072187e5efb55210c0df077c670e"
+    },
     "permission_interface.tl_ContentAnalytics.txt": {
         "global_cache": false,
         "version_id": 1000000,
         "version_string": "1.0.0",
-        "hash": "2628bfea3d8b302c814340daf6264af7"
+        "hash": "80d8705f68dd973e4adb17e2841a5d93"
     }
 }

@@ -1,0 +1,33 @@
+<xf:css src="chartist.css" />
+<xf:js prod="xf/stats-compiled.js" dev="vendor/chartist/chartist.min.js, xf/stats.js" />
+
+<div class="block">
+    <div class="block-outer">
+        <div class="block-outer-opposite">
+            <div class="buttonGroup">
+                <xf:button href="{{ link($baseLink, $linkData, {'grouping': 'hourly'}) }}"
+                           class="button--{{ ($selected === 'hourly') ? 'cta' : 'link' }}">{{ phrase('content_analytics_hourly') }}</xf:button>
+                <xf:button href="{{ link($baseLink, $linkData, {'grouping': 'daily'}) }}"
+                           class="button--{{ ($selected === 'daily') ? 'cta' : 'link' }}">{{ phrase('content_analytics_daily') }}</xf:button>
+                <xf:button href="{{ link($baseLink, $linkData, {'grouping': 'monthly'}) }}"
+                           class="button--{{ ($selected === 'monthly') ? 'cta' : 'link' }}">{{ phrase('content_analytics_monthly') }}</xf:button>
+            </div>
+        </div>
+    </div>
+    <div class="block-container">
+        <div class="block-body">
+            <div class="block-row">
+                <div data-xf-init="stats">
+                    <script class="js-statsData" type="application/json">
+                        {$data|json|raw}
+                    </script>
+                    <script class="js-statsSeriesLabels" type="application/json">
+                        {$displayTypes|json|raw}
+                    </script>
+                    <div class="ct-chart ct-major-tenth js-statsChart"></div>
+                    <ul class="ct-legend js-statsLegend"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

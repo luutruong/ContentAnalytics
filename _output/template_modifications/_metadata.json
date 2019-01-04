@@ -1,5 +1,8 @@
 {
     "admin/tlCG_tools_rebuild.json": {
         "hash": "d6463e916d8dd1c9b3c402e4abc9bb3d"
+    },
+    "public/tlCA_forum_view.json": {
+        "hash": "bc0fc8e4ffb7996da3605a89cc7758d0"
     }
 }

@@ -8,6 +8,7 @@ namespace Truonglv\ContentAnalytics\ContentData;
 abstract class AbstractHandler
 {
     abstract public function getContentStatsInRange($fromDate, $toDate);
+    abstract public function getAnalyticsDataHourly($contentId, $fromDate, $toDate);
 
     public function getContentTitlePhrase()
     {
@@ -16,7 +17,7 @@ abstract class AbstractHandler
 
     protected function getStatsBasicQuery($table, $contentIdColumn, $dateColumn, $extraWhere, $bind)
     {
-        $db = \XF::app()->db();
+        $db = $this->db();
         if (empty($extraWhere)) {
             $extraWhere = '1=1';
         }
@@ -34,6 +35,11 @@ abstract class AbstractHandler
             GROUP BY {$contentIdColumn}, FLOOR(base_table.{$dateColumn}/86400)
             ORDER BY base_table.{$dateColumn}
         ", $bind);
+    }
+
+    protected function db()
+    {
+        return \XF::app()->db();
     }
 
     protected function getBasicQueryJoinTables()

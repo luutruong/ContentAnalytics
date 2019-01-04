@@ -1,0 +1,9 @@
+{
+    "template": "forum_view",
+    "description": "Render forum analytics",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:ad position=\"forum_view_above_thread_list\" arg-forum=\"{$forum}\" />",
+    "replace": "<xf:callback class=\"Truonglv\\ContentAnalytics\\Callback\"\n\t\t\t method=\"renderForumAnalytics\"\n\t\t\t params=\"{'forum': $forum}\" />\n$0"
+}

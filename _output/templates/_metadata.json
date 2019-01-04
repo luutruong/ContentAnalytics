@@ -8,5 +8,10 @@
         "version_id": 1000000,
         "version_string": "1.0.0",
         "hash": "116f7afc6ee12b23d7d6bfb97917609c"
+    },
+    "public/content_analytics_graph.html": {
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "fd97373afeea6c1336581a748773da60"
     }
 }
