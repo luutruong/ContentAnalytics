@@ -1,0 +1,1 @@
+Analytics from {from} to {to}

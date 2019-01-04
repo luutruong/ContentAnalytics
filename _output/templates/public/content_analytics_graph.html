@@ -1,4 +1,5 @@
 <xf:css src="chartist.css" />
+<xf:css src="content_analytics.less" />
 <xf:js prod="xf/stats-compiled.js" dev="vendor/chartist/chartist.min.js, xf/stats.js" />
 
 <div class="block">
@@ -15,6 +16,13 @@
         </div>
     </div>
     <div class="block-container">
+        <div class="block-header">
+            {{ phrase('content_analytics_analytics_from_x_to_y', {
+                'from': date($firstRecord.ts),
+                'to': date($lastRecord.ts)
+            }) }}
+        </div>
+
         <div class="block-body">
             <div class="block-row">
                 <div data-xf-init="stats">

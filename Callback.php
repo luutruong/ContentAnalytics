@@ -31,12 +31,17 @@ class Callback
             $grouping
         );
 
+        $firstRecord = reset($analyticsData);
+        $lastRecord = end($analyticsData);
+
         return $templater->renderTemplate('public:content_analytics_graph', [
             'data' => $analyticsData,
             'displayTypes' => App::analyticsRepo()->getDisplayTypes($contentTypes),
             'baseLink' => 'forums',
             'linkData' => $forum,
-            'selected' => $grouping
+            'selected' => $grouping,
+            'firstRecord' => $firstRecord,
+            'lastRecord' => $lastRecord
         ]);
     }
 }

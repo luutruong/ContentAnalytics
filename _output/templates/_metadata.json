@@ -9,9 +9,14 @@
         "version_string": "1.0.0",
         "hash": "116f7afc6ee12b23d7d6bfb97917609c"
     },
+    "public/content_analytics.less": {
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "0047d3e5238820b403a48e62c94c2dca"
+    },
     "public/content_analytics_graph.html": {
         "version_id": 1000000,
         "version_string": "1.0.0",
-        "hash": "fd97373afeea6c1336581a748773da60"
+        "hash": "697682cac8bcd2e419f9c07b7120a2d7"
     }
 }

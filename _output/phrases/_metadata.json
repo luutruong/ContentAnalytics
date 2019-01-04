@@ -1,4 +1,10 @@
 {
+    "content_analytics_analytics_from_x_to_y.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "1f5c46078f4e142b2529702d7f1da1e3"
+    },
     "content_analytics_daily.txt": {
         "global_cache": false,
         "version_id": 1000000,
@@ -16,6 +22,12 @@
         "version_id": 1000000,
         "version_string": "1.0.0",
         "hash": "9030e39f00132d583da4122532e509e9"
+    },
+    "content_analytics_rebuild_content_data.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "13c5a67c43c4784ef7f72ed35d1005c7"
     },
     "cron_entry.tl_ContentAnalytics.txt": {
         "global_cache": false,
