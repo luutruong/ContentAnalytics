@@ -2,12 +2,12 @@
 
 namespace Truonglv\ContentAnalytics;
 
-use Truonglv\ContentAnalytics\DevHelper\SetupTrait;
+use XF\Db\Schema\Create;
 use XF\AddOn\AbstractSetup;
 use XF\AddOn\StepRunnerInstallTrait;
 use XF\AddOn\StepRunnerUpgradeTrait;
 use XF\AddOn\StepRunnerUninstallTrait;
-use XF\Db\Schema\Create;
+use Truonglv\ContentAnalytics\DevHelper\SetupTrait;
 
 class Setup extends AbstractSetup
 {

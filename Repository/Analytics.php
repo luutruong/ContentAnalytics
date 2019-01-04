@@ -3,10 +3,11 @@
  * @license
  * Copyright 2019 TruongLuu. All Rights Reserved.
  */
+
 namespace Truonglv\ContentAnalytics\Repository;
 
-use Truonglv\ContentAnalytics\App;
 use XF\Mvc\Entity\Repository;
+use Truonglv\ContentAnalytics\App;
 
 class Analytics extends Repository
 {
@@ -24,12 +25,12 @@ class Analytics extends Repository
         if ($grouping === 'daily') {
             $fromDate = $now - 30 * 86400;
             $toDate = $now;
-            $groupUnit = "+1 days";
+            $groupUnit = '+1 days';
             $queryDateFormat = '%Y-%m-%d';
         } elseif ($grouping === 'monthly') {
             $fromDate = $now - 365 * 86400;
             $toDate = $now;
-            $groupUnit = "+1 months";
+            $groupUnit = '+1 months';
             $queryDateFormat = '%Y-%m';
         } else {
             throw new \InvalidArgumentException('Unknown analytics grouping (' . $grouping . ')');
@@ -41,7 +42,7 @@ class Analytics extends Repository
                 FROM_UNIXTIME(content_date, "' . $queryDateFormat . '") AS content_date_formatted,
                 MAX(content_date) AS content_date
             FROM xf_tl_content_analytics_data FORCE INDEX (content_type_id_date)
-            WHERE content_type IN (' . $db->quote($contentType) .')
+            WHERE content_type IN (' . $db->quote($contentType) . ')
                 AND content_id = ?
                 AND content_date BETWEEN ? AND ?
             GROUP BY content_type, content_date_formatted
@@ -56,7 +57,7 @@ class Analytics extends Repository
         $dt = new \DateTime('@' . $fromDate);
         $dt->setTime(0, 0, 0);
         if ($grouping === 'monthly') {
-            $dt->setDate($dt->format('Y'), $dt->format('m'), 1);
+            $dt->setDate((int) $dt->format('Y'), (int) $dt->format('m'), 1);
         }
 
         $visitor = \XF::visitor();
@@ -134,7 +135,7 @@ class Analytics extends Repository
         $language = $this->app()->language($visitor->language_id);
 
         while ($fromDate <= $toDate) {
-            $dataKey = date('Y-m-d H:i', $fromDate);
+            $dataKey = date('Y-m-d H:i', intval($fromDate));
 
             $resultItem = [
                 'ts' => $fromDate,

@@ -3,10 +3,11 @@
  * @license
  * Copyright 2019 TruongLuu. All Rights Reserved.
  */
+
 namespace Truonglv\ContentAnalytics\Job;
 
-use Truonglv\ContentAnalytics\App;
 use XF\Job\AbstractJob;
+use Truonglv\ContentAnalytics\App;
 
 class ContentBuild extends AbstractJob
 {

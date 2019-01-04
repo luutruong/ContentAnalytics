@@ -3,12 +3,13 @@
  * @license
  * Copyright 2019 TruongLuu. All Rights Reserved.
  */
+
 namespace Truonglv\ContentAnalytics\Job;
 
+use XF\Timer;
+use XF\Job\AbstractJob;
 use Truonglv\ContentAnalytics\App;
 use Truonglv\ContentAnalytics\Entity\AnalyticsData;
-use XF\Job\AbstractJob;
-use XF\Timer;
 
 class ContentRebuild extends AbstractJob
 {
@@ -60,6 +61,7 @@ class ContentRebuild extends AbstractJob
                 $contentTypeForRun = array_shift($contentTypeKeys);
                 if (!$this->hasCompletedRebuiltContent($contentTypeForRun)) {
                     $runByContent = $contentTypeForRun;
+
                     break;
                 }
             }
@@ -122,7 +124,9 @@ class ContentRebuild extends AbstractJob
     public function getStatusMessage()
     {
         $contentType = $this->data['content_type'];
-        return sprintf('%s (%s)',
+
+        return sprintf(
+            '%s (%s)',
             \XF::phrase('content_analytics_rebuild_content_data'),
             $contentType ? App::contentDataRepo()->getContentHandlerTitle($contentType) : ''
         );

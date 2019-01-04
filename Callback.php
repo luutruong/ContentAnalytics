@@ -3,6 +3,7 @@
  * @license
  * Copyright 2019 TruongLuu. All Rights Reserved.
  */
+
 namespace Truonglv\ContentAnalytics;
 
 use XF\Template\Templater;
@@ -26,7 +27,8 @@ class Callback
         $contentTypes = ['forum_thread', 'forum_post'];
         $analyticsData = App::analyticsRepo()->getAnalyticsData(
             $contentTypes,
-            $forum->node_id, $grouping
+            $forum->node_id,
+            $grouping
         );
 
         return $templater->renderTemplate('public:content_analytics_graph', [

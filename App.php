@@ -3,11 +3,12 @@
  * @license
  * Copyright 2019 TruongLuu. All Rights Reserved.
  */
+
 namespace Truonglv\ContentAnalytics;
 
+use XF\Entity\User;
 use Truonglv\ContentAnalytics\Repository\Analytics;
 use Truonglv\ContentAnalytics\Repository\ContentData;
-use XF\Entity\User;
 
 class App
 {
@@ -36,6 +37,7 @@ class App
     public static function hasPermission($permission, User $user = null)
     {
         $user = $user ?: \XF::visitor();
+
         return $user->hasPermission('general', 'tlCA_' . $permission);
     }
 }

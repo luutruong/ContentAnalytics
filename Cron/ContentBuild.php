@@ -3,6 +3,7 @@
  * @license
  * Copyright 2019 TruongLuu. All Rights Reserved.
  */
+
 namespace Truonglv\ContentAnalytics\Cron;
 
 use Truonglv\ContentAnalytics\App;

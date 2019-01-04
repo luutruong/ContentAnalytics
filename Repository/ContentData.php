@@ -3,12 +3,13 @@
  * @license
  * Copyright 2019 TruongLuu. All Rights Reserved.
  */
+
 namespace Truonglv\ContentAnalytics\Repository;
 
-use Truonglv\ContentAnalytics\ContentData\AbstractHandler;
-use Truonglv\ContentAnalytics\Entity\AnalyticsData;
-use XF\Mvc\Entity\Repository;
 use XF\Timer;
+use XF\Mvc\Entity\Repository;
+use Truonglv\ContentAnalytics\Entity\AnalyticsData;
+use Truonglv\ContentAnalytics\ContentData\AbstractHandler;
 
 class ContentData extends Repository
 {
@@ -35,6 +36,7 @@ class ContentData extends Repository
     public function getContentHandlerTitle($contentType)
     {
         $handler = $this->getHandler($contentType);
+
         return $handler->getContentTitlePhrase() ?: $contentType;
     }
 
@@ -81,7 +83,7 @@ class ContentData extends Repository
     }
 
     /**
-     * @param $contentType
+     * @param string $contentType
      * @return AbstractHandler
      */
     public function getHandler($contentType)
